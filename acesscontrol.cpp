@@ -1,29 +1,22 @@
-//protected access control
-#include <iostream>
+//public and private acess control
+ #include <iostream>
 using namespace std;
 
-class Person {
-protected:
-    int age;
-};
+class Student {
+private:
+    int marks = 90;
 
-class Student : public Person {
 public:
-    void setAge(int a) {
-        age = a;   
-    }
+    int roll = 21;
 
-    void showAge() {
-        cout << "Age: " << age;
+    void showMarks() {
+        cout << marks << endl;
     }
 };
 
 int main() {
     Student s;
-    s.setAge(20);
-    s.showAge();
-
-    
-
+    cout << s.roll << endl;
+    s.showMarks();
     return 0;
-}
+} 
